@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Dessert Recipes | Savory Spoon</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+</head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-JZQ7DW7REV"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-JZQ7DW7REV');
+</script>
+<body class="bg-gray-50 font-sans">
+
+<!-- Navigation -->
+<header class="bg-white shadow-sm sticky top-0 z-10">
+  <div class="container mx-auto px-4 py-4 flex justify-between items-center">
+    <div class="flex items-center">
+      <h1 class="text-2xl font-bold text-amber-600 flex items-center">
+        <i class="fas fa-utensils mr-2"></i> Savory Spoon
+      </h1>
+    </div>
+    <div class="hidden md:flex space-x-1">
+      <a href="index.html" class="tab-button px-4 py-2 font-medium text-gray-700 hover:text-amber-600">Home</a>
+      <a href="breakfast.html" class="tab-button px-4 py-2 font-medium text-gray-700 hover:text-amber-600">Breakfast</a>
+      <a href="lunch.html" class="tab-button px-4 py-2 font-medium text-gray-700 hover:text-amber-600">Lunch</a>
+      <a href="dinner.html" class="tab-button px-4 py-2 font-medium text-gray-700 hover:text-amber-600">Dinner</a>
+      <a href="dessert.html" class="tab-button px-4 py-2 font-medium text-gray-700 hover:text-amber-600 active">Dessert</a>
+    </div>
+    <button onclick="toggleMobileMenu()" class="md:hidden text-gray-700">
+      <i class="fas fa-bars text-xl"></i>
+    </button>
+  </div>
+  <div id="mobileMenu" class="hidden md:hidden bg-white border-t">
+    <div class="container mx-auto px-4 py-2 flex flex-col">
+      <a href="index.html" class="tab-button w-full text-left px-4 py-2 font-medium text-gray-700 hover:text-amber-600">Home</a>
+      <a href="breakfast.html" class="tab-button w-full text-left px-4 py-2 font-medium text-gray-700 hover:text-amber-600">Breakfast</a>
+      <a href="lunch.html" class="tab-button w-full text-left px-4 py-2 font-medium text-gray-700 hover:text-amber-600">Lunch</a>
+      <a href="dinner.html" class="tab-button w-full text-left px-4 py-2 font-medium text-gray-700 hover:text-amber-600">Dinner</a>
+      <a href="dessert.html" class="tab-button w-full text-left px-4 py-2 font-medium text-gray-700 hover:text-amber-600 active">Dessert</a>
+    </div>
+  </div>
+</header>
+
+<!-- Search Bar -->
+<div class="bg-amber-50 py-8">
+  <div class="container mx-auto px-4">
+    <div class="max-w-2xl mx-auto relative">
+      <input type="text" id="searchInput" placeholder="Search recipes..." class="w-full px-6 py-3 rounded-full border border-gray-300 focus:outline-none focus:ring-2 focus:ring-amber-500 focus:border-transparent shadow-sm" />
+      <button onclick="searchRecipes()" class="absolute right-2 top-1/2 transform -translate-y-1/2 bg-amber-500 text-white rounded-full p-2 hover:bg-amber-600 transition-colors">
+        <i class="fas fa-search"></i>
+      </button>
+    </div>
+  </div>
+</div>
+
+<!-- Dessert Recipes Section -->
+<div class="container mx-auto px-4 py-12">
+  <div class="flex justify-between items-center mb-8">
+    <h2 class="text-2xl font-bold text-gray-800">Dessert Recipes</h2>
+    <div class="flex items-center space-x-2">
+      <label for="dessertFilter" class="text-gray-600 text-sm">Filter:</label>
+      <select id="dessertFilter" class="border rounded px-3 py-1 text-sm" onchange="filterRecipes()">
+        <option value="all">All</option>
+        <option value="cakes">Cakes</option>
+        <option value="cookies">Cookies</option>
+        <option value="pies">Pies</option>
+      </select>
+    </div>
+  </div>
+  <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+    <!-- Recipe 1: Chocolate Lava Cake -->
+<a href="recipes/chocolate-lava.html" class="bg-white rounded-lg overflow-hidden shadow-md recipe-card transition-all duration-300 cursor-pointer block">
+      <div class="relative overflow-hidden h-48">
+        <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/56e7be49-3f70-444c-8e3f-a976eeef4aa8.png" alt="Chocolate lava cakes with powdered sugar and raspberry garnish" class="w-full h-full object-cover" />
+        <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-gray-900 to-transparent p-4">
+          <span class="text-xs bg-amber-500 text-white px-2 py-1 rounded-full">Dessert</span>
+          <h3 class="text-white text-lg font-semibold mt-2">Chocolate Lava Cake</h3>
+        </div>
+      </div>
+      <div class="p-4">
+        <div class="flex justify-between items-center text-sm text-gray-500 mb-2">
+          <span><i class="fas fa-clock mr-1"></i> 25 mins</span>
+          <span><i class="fas fa-utensils mr-1"></i> Intermediate</span>
+        </div>
+        <p class="text-gray-600 text-sm">Decadent chocolate cakes with a molten center, perfect for special occasions.</p>
+      </div>
+    </a>
+
+   
+    <!-- Recipe 2: Chocolate Chip Cookies -->
+<a href="recipes/choc-chip-cookies.html" class="bg-white rounded-lg overflow-hidden shadow-md recipe-card transition-all duration-300 cursor-pointer block">
+      <div class="relative overflow-hidden h-48">
+        <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/912ccb1f-01a8-42ea-a88b-cd370e9b4dbc.png" alt="Freshly baked chocolate chip cookies on a cooling rack" class="w-full h-full object-cover" />
+        <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-gray-900 to-transparent p-4">
+          <span class="text-xs bg-amber-500 text-white px-2 py-1 rounded-full">Dessert</span>
+          <h3 class="text-white text-lg font-semibold mt-2">Chocolate Chip Cookies</h3>
+        </div>
+      </div>
+      <div class="p-4">
+        <div class="flex justify-between items-center text-sm text-gray-500 mb-2">
+          <span><i class="fas fa-clock mr-1"></i> 35 mins</span>
+          <span><i class="fas fa-utensils mr-1"></i> Easy</span>
+        </div>
+        <p class="text-gray-600 text-sm">Classic cookies with crispy edges and chewy centers packed with chocolate chips.</p>
+      </div>
+    </a>
+
+    
+    <!-- Recipe 3: Classic Apple Pie -->
+<a href="recipes/apple-pie.html" class="bg-white rounded-lg overflow-hidden shadow-md recipe-card transition-all duration-300 cursor-pointer block">
+      <div class="relative overflow-hidden h-48">
+        <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/4d08080a-e7e7-42e6-8554-5265c458f73c.png" alt="Golden brown apple pie with lattice crust served on a wooden board" class="w-full h-full object-cover" />
+        <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-gray-900 to-transparent p-4">
+          <span class="text-xs bg-amber-500 text-white px-2 py-1 rounded-full">Dessert</span>
+          <h3 class="text-white text-lg font-semibold mt-2">Classic Apple Pie</h3>
+        </div>
+      </div>
+      <div class="p-4">
+        <div class="flex justify-between items-center text-sm text-gray-500 mb-2">
+          <span><i class="fas fa-clock mr-1"></i> 1 hour 15 mins</span>
+          <span><i class="fas fa-utensils mr-1"></i> Intermediate</span>
+        </div>
+        <p class="text-gray-600 text-sm">Flaky pie crust filled with spiced apples and baked to golden perfection.</p>
+      </div>
+    </a>
+
+    
+  </div>
+</div>
+
+<!-- Footer -->
+<footer class="bg-gray-900 text-white py-12">
+  <div class="container mx-auto px-4">
+    <div class="flex flex-wrap justify-center gap-8 mb-8 text-center">
+      <a href="about.html" class="hover:text-amber-400 transition-colors font-medium">About Us</a>
+      <a href="disclaimer.html" class="hover:text-amber-400 transition-colors font-medium">Disclaimer</a>
+      <a href="privacy.html" class="hover:text-amber-400 transition-colors font-medium">Privacy &amp; Policy</a>
+      <a href="terms.html" class="hover:text-amber-400 transition-colors font-medium">Terms &amp; Conditions</a>
+    </div>
+
+    <div> <p>
+        This site is not a part of the Facebook website or Facebook Inc, YouTube, or Google Inc. Additionally, this site is <strong>NOT</strong> endorsed by Facebook, YouTube, or Google in any way. All trademarks and copyrights are the property of their respective owners.
+      </p></div>
+      
+      
+      
+
+    <div class="border-t border-gray-800 mt-12 pt-8 text-center text-gray-400">
+      <p>© 2023 Savory Spoon. All rights reserved.</p>
+    </div>
+  </div>
+</footer>
+
+<script>
+  function toggleMobileMenu() {
+    document.getElementById('mobileMenu').classList.toggle('hidden');
+  }
+  function searchRecipes() {
+    const searchTerm = document.getElementById('searchInput').value;
+    if (searchTerm.trim() === '') return;
+    alert(`Searching for recipes containing: ${searchTerm}`);
+  }
+  function filterRecipes() {
+    const filterValue = document.getElementById('dessertFilter').value;
+    alert(`Filtering dessert recipes by: ${filterValue}`);
+  }
+</script>
+
+</body>
+</html>

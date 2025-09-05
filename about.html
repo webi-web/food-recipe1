@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>About Us | Savory Spoon</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+</head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-JZQ7DW7REV"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-JZQ7DW7REV');
+</script>
+<body class="bg-gray-50 font-sans">
+
+<!-- Navigation -->
+<header class="bg-white shadow-sm sticky top-0 z-10">
+  <div class="container mx-auto px-4 py-4 flex justify-between items-center">
+    <div class="flex items-center">
+      <h1 class="text-2xl font-bold text-amber-600 flex items-center">
+        <i class="fas fa-utensils mr-2"></i> Savory Spoon
+      </h1>
+    </div>
+    <div class="hidden md:flex space-x-1">
+      <a href="index.html" class="tab-button px-4 py-2 font-medium text-gray-700 hover:text-amber-600">Home</a>
+      <a href="breakfast.html" class="tab-button px-4 py-2 font-medium text-gray-700 hover:text-amber-600">Breakfast</a>
+      <a href="lunch.html" class="tab-button px-4 py-2 font-medium text-gray-700 hover:text-amber-600">Lunch</a>
+      <a href="dinner.html" class="tab-button px-4 py-2 font-medium text-gray-700 hover:text-amber-600">Dinner</a>
+      <a href="dessert.html" class="tab-button px-4 py-2 font-medium text-gray-700 hover:text-amber-600">Dessert</a>
+     
+    </div>
+    <button onclick="toggleMobileMenu()" class="md:hidden text-gray-700">
+      <i class="fas fa-bars text-xl"></i>
+    </button>
+  </div>
+  <div id="mobileMenu" class="hidden md:hidden bg-white border-t">
+    <div class="container mx-auto px-4 py-2 flex flex-col">
+      <a href="index.html" class="tab-button w-full text-left px-4 py-2 font-medium text-gray-700 hover:text-amber-600">Home</a>
+      <a href="breakfast.html" class="tab-button w-full text-left px-4 py-2 font-medium text-gray-700 hover:text-amber-600">Breakfast</a>
+      <a href="lunch.html" class="tab-button w-full text-left px-4 py-2 font-medium text-gray-700 hover:text-amber-600">Lunch</a>
+      <a href="dinner.html" class="tab-button w-full text-left px-4 py-2 font-medium text-gray-700 hover:text-amber-600">Dinner</a>
+      <a href="dessert.html" class="tab-button w-full text-left px-4 py-2 font-medium text-gray-700 hover:text-amber-600">Dessert</a>
+      
+    </div>
+  </div>
+</header>
+
+<!-- About Us Content -->
+<div class="container mx-auto px-4 py-12 max-w-3xl text-gray-800">
+  <h1 class="text-3xl font-bold mb-6">Welcome to Savory Spoon 🍴✨</h1>
+  <p class="mb-4">
+    We’re passionate about sharing delicious recipes, cooking tips, and food stories that inspire people to enjoy the art of cooking. Whether you’re a beginner in the kitchen or a seasoned foodie, our goal is to bring you easy-to-follow recipes, healthy food ideas, and creative twists on classic dishes.
+  </p>
+  <p class="mb-4">
+    At Savory Spoon, we believe that food is more than just fuel – it’s about taste, culture, and connection. Each recipe is tested with love and care so you can recreate it at home with confidence.
+  </p>
+  <p class="mb-4 font-semibold">Here, you’ll find:</p>
+  <ul class="list-disc list-inside mb-6 space-y-2 text-gray-700">
+    <li>✅ Simple & tasty recipes</li>
+    <li>✅ Nutrition tips & food facts</li>
+    <li>✅ Kitchen hacks for everyday cooking</li>
+    <li>✅ Stories that celebrate food and culture</li>
+  </ul>
+  <p>
+    We’re glad to have you join our food journey! 🥗🍛🍰<br />
+    Let’s cook, share, and enjoy good food together.
+  </p>
+</div>
+<footer class="bg-gray-900 text-white py-12">
+  <div class="container mx-auto px-4">
+    <div class="flex flex-wrap justify-center gap-8 mb-8 text-center">
+      <a href="about.html" class="hover:text-amber-400 transition-colors font-medium">About Us</a>
+      <a href="disclaimer.html" class="hover:text-amber-400 transition-colors font-medium">Disclaimer</a>
+      <a href="privacy.html" class="hover:text-amber-400 transition-colors font-medium">Privacy &amp; Policy</a>
+      <a href="terms.html" class="hover:text-amber-400 transition-colors font-medium">Terms &amp; Conditions</a>
+    </div>
+
+    <div> <p>
+        This site is not a part of the Facebook website or Facebook Inc, YouTube, or Google Inc. Additionally, this site is <strong>NOT</strong> endorsed by Facebook, YouTube, or Google in any way. All trademarks and copyrights are the property of their respective owners.
+      </p></div>
+      
+      
+      
+
+    <div class="border-t border-gray-800 mt-12 pt-8 text-center text-gray-400">
+      <p>© 2023 Savory Spoon. All rights reserved.</p>
+    </div>
+  </div>
+</footer>
+<script>
+  function toggleMobileMenu() {
+    const menu = document.getElementById('mobileMenu');
+    menu.classList.toggle('hidden');
+  }
+</script>
+
+</body>
+</html>
